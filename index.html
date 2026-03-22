@@ -587,6 +587,59 @@ h2 {
   letter-spacing: .04em;
 }
 
+/* ── FAQ ── */
+.faq-list {
+  margin-top: 28px;
+  border: 1.5px solid var(--smoke);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.faq-item {
+  border-bottom: 1.5px solid var(--smoke);
+}
+
+.faq-item:last-child {
+  border-bottom: none;
+}
+
+.faq-item summary {
+  list-style: none;
+  cursor: pointer;
+  padding: 18px 20px;
+  font-size: 15px;
+  font-weight: bold;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: '+';
+  color: var(--red);
+  font-size: 18px;
+  line-height: 1;
+  transition: transform .15s ease;
+}
+
+.faq-item[open] summary::after {
+  content: '−';
+}
+
+.faq-answer {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+  padding: 0 20px 18px;
+}
+
 /* ── CTA ── */
 .cta-block {
   text-align: center;
@@ -874,6 +927,31 @@ footer a:hover { color: var(--red); }
           <div class="eg-desc">Mic → delay → reverb → distortion → out. Every node built from scratch, zero plugin APIs.</div>
           <span class="eg-tag">Processing</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cs" id="faq">
+    <div class="card">
+      <div class="eyebrow">FAQs</div>
+      <h2>Quick answers before you ship.</h2>
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary>Who can join Wavelength?</summary>
+          <p class="faq-answer">Teenagers worldwide can join. If you're in the Hack Club community and can build + ship a sound-focused project, you're good.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Can I use libraries like Tone.js or p5.sound?</summary>
+          <p class="faq-answer">Yes. Libraries are totally fine as long as your code is what creates or processes the sound logic.</p>
+        </details>
+        <details class="faq-item">
+          <summary>Do I need to deploy a website?</summary>
+          <p class="faq-answer">Not required. A live web demo is ideal, but terminal or desktop projects can be submitted with a short video demo.</p>
+        </details>
+        <details class="faq-item">
+          <summary>How do rewards get approved?</summary>
+          <p class="faq-answer">A shipwright checks your demo, runs the delete test, and verifies Hackatime hours. Once approved, shipping details are sent to you.</p>
+        </details>
       </div>
     </div>
   </section>
